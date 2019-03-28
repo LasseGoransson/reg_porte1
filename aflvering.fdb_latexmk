@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1553779423 "aflvering.tex" "aflvering.pdf" "aflvering" 1553779459
+["pdflatex"] 1553779423 "aflvering.tex" "aflvering.pdf" "aflvering" 1553780807
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136765053 960 379cc0019370a9e0208a0a3f949f847a ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136765053 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -87,12 +87,12 @@
   "C:/Users/Batman/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1551865424 4098844 dfcdbef10a5d06320928b1f376b2353c ""
   "C:/Users/Batman/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1551865352 2579884 436fbd68f158e99207ffaed7ae5c0ead ""
   "aflvering.aux" 1553779429 760 36f716ef5242057aaef02f27ba20d30c ""
-  "aflvering.tex" 1553779458 6542 daabfb282c073a13f40518f2f233b378 ""
+  "aflvering.tex" 1553780806 6542 daabfb282c073a13f40518f2f233b378 ""
   "first_kp_adjustment.jpg" 0 -1 0 ""
   "rlocus.jpg" 0 -1 0 ""
   "second_kp_adjustment.jpg" 0 -1 0 ""
   "third_kp_adjustment.jpg" 0 -1 0 ""
   (generated)
-  "aflvering.aux"
   "aflvering.pdf"
   "aflvering.log"
+  "aflvering.aux"
