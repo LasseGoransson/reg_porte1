@@ -29,7 +29,7 @@ Udarbejdet af den bedste (AC)
 
 \subsection*{System Modeling}
 \begin{itemize}
-  \item Setup a model (nth-order dierential equation) of the system.
+  \item Setup a model (nth-order dierential equation) of the system.
   \item Derive a linearized model of the system at an angle of $\pi/3$ rad.
 \end{itemize}
 
@@ -65,8 +65,8 @@ However due to the equation above we will add an extra pole as well as two zeroe
 The root locus plot of this looks like this:
 \begin{figure}[htbp]
   \centering
-  \includegraphics{rlocus.jpg}
-  \caption{root locus plot} \label{my_root_locus_plot}
+  \includegraphics{images/rlocus.jpg}
+  \caption{Root locus plot} \label{my_root_locus_plot}
 \end{figure}
 Next up is checking the performance of the entire system, see transferfunction \ref{closed_loop_system}.
 \begin{equation} \label{closed_loop_system}
@@ -83,7 +83,7 @@ By using the matlab function stepinfo and step, both the step responds and the i
 \end{itemize}
 \begin{figure}[htbp]
   \centering
-  \includegraphics{first_kp_adjustment.jpg}
+  \includegraphics[width=0.7\textwidth]{images/first_kp_adjustment.jpg}
   \caption{step response for the first iteration} \label{my_first_step}
 \end{figure}
 Next the Kp increases to 4.132 and the following perforamnce of the system can be observed:
@@ -97,7 +97,7 @@ Next the Kp increases to 4.132 and the following perforamnce of the system can b
 \end{itemize}
 \begin{figure}[htbp]
   \centering
-  \includegraphics{second_kp_adjustment.jpg}
+  \includegraphics[width=0.7\textwidth]{images/second_kp_adjustment.jpg}
   \caption{step response for the second iteration} \label{my_second_step}
 \end{figure}
 The perfoamnce has technically inproved when it comes to rise time and settling time, however the desired rise time is around 1 second so it isn't an improvemnt for the desired system. The overshoot, however minute, has increased. The steady state error is eliminated as the previous with try, observed on figure \ref{my_second_step}. So this time Kp will be decreased to 2.00:
@@ -111,7 +111,7 @@ The perfoamnce has technically inproved when it comes to rise time and settling 
 \end{itemize}
 \begin{figure}[htbp]
   \centering
-  \includegraphics{third_kp_adjustment.jpg}
+  \includegraphics[width=0.7\textwidth]{images/3_kp_adjustment.jpg}
   \caption{step response for the third iteration} \label{my_third_step}
 \end{figure}
 This time the rise time has increased and the overshoot has decreased both, however, less than desired. However the Kp can't be decreased much more before the system becomes unstable. There is also a small steady state error that can be observed on figure \ref{my_third_step}.
