@@ -23,11 +23,54 @@ REG - F19 - Porteføjle 1 \linebreak
 \large
 Udarbejdet af lagoe16
 
+\subsection*{System Modeling}
 
+\begin{itemize}
+  \item Setup a model (nth-order dierential equation) of the system.
+  \item Derive a linearized model of the system at an angle of $\pi/3$ rad.
+\end{itemize}
+
+\subsection*{Performance Specication}
+
+\begin{itemize}
+  \item Specify a desired performance of the system.
+\end{itemize}
+
+\begin{itemize}
+  \item Rise time = 1.0 seconds.
+  \item Settling time = 1.2 seconds.
+  \item Overshoot = 0.5 procent.
+
+\end{itemize}
+We have chosen the following specifications based on the fact that the system is a robotic arm. It should neither be too fast nor too slow getting from point to point. If it's too slow, it'll limit it's use significantly however if it moves too fast it might both be impossible due to the motor and very dangerous for people around. The settling time should be as low as possible else the performance will slow down significantly and the same can be said about overshoot.
+\subsection*{Controller Design}
+\begin{itemize}
+  \item Design a PID controller for the linearized model of the system such that it attains the desired performance. The tuning procedure should be described.
+\end{itemize}
+
+The way we can 
+\begin{equation}
+  kp\cdot(1+\frac{1}{Ti}\cdot \frac{1}{s}+Tds)
+\end{equation}
+
+\begin{equation}
+  kp(\frac{Tds^2 + s + \frac{1}{Ti}}{s})
+\end{equation}
+
+\subsection*{Simulation}
+
+\begin{itemize}
+  \item Simulate the linearized system with set point $\pi/3$ rad. and initial condition 0 rad.
+  \item Simulate the nonlinear system model with the designed PID control.
+\end{itemize}
+
+A small report should document the above steps, with derivations, block diagrams, and graphs related
+to the simulations (plot both the input and output of the system). The report must follow the provided
+template.
+13
 
 
 
 
 
 \end{document}
-
