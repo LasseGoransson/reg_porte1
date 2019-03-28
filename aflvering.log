@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.3.6)  28 MAR 2019 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2019.3.6)  28 MAR 2019 14:23
 entering extended mode
 **./aflvering.tex
 (aflvering.tex
@@ -566,19 +566,19 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 )) (aflvering.aux)
 \openout1 = `aflvering.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 21.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -660,21 +660,21 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 20.
+LaTeX Info: Redefining \selectfont on input line 21.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
-LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 30.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-aflvering.tex:31: Package inputenc Error: Keyboard character used is undefined
+aflvering.tex:32: Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `utf8'.
 
 See the inputenc package documentation for explanation.
@@ -686,93 +686,78 @@ or \DeclareInputMath before using this key.
 
 {C:/Users/Batman/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `images/rlocus.svg' on input line 68.
+LaTeX Warning: File `rlocus.jpg' not found on input line 68.
 
 
-aflvering.tex:68: Package svg Error: File `rlocus_svg-tex.pdf' is missing.
+aflvering.tex:68: Package pdftex.def Error: File `rlocus.jpg' not found: using 
+draft setting.
 
-See the svg package documentation for explanation.
+See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/rlocus_svg-tex.pdf'
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 68.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [2]
+
+LaTeX Warning: File `first_kp_adjustment.jpg' not found on input line 86.
 
 
-aflvering.tex:68: Package svg Error: File `rlocus_svg-tex.pdf_tex' is missing.
+aflvering.tex:86: Package pdftex.def Error: File `first_kp_adjustment.jpg' not 
+found: using draft setting.
 
-See the svg package documentation for explanation.
+See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/rlocus_svg-tex.pdf_tex'
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `images/first_kp_adjustment.svg' on input line 87.
+LaTeX Warning: File `second_kp_adjustment.jpg' not found on input line 100.
 
 
-aflvering.tex:87: Package svg Error: File `first_kp_adjustment_svg-tex.pdf' is 
-missing.
+aflvering.tex:100: Package pdftex.def Error: File `second_kp_adjustment.jpg' no
+t found: using draft setting.
 
-See the svg package documentation for explanation.
+See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/first_kp_adjustment_svg-tex.pdf'
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[3]
+
+LaTeX Warning: File `third_kp_adjustment.jpg' not found on input line 114.
 
 
-aflvering.tex:87: Package svg Error: File `first_kp_adjustment_svg-tex.pdf_tex'
- is missing.
+aflvering.tex:114: Package pdftex.def Error: File `third_kp_adjustment.jpg' not
+ found: using draft setting.
 
-See the svg package documentation for explanation.
+See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/first_kp_adjustment_svg-tex.pdf_tex'
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-[2]
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `images/second_kp_adjustment.svg' on input line 102.
-
-
-aflvering.tex:102: Package svg Error: File `second_kp_adjustment_svg-tex.pdf' i
-s missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/second_kp_adjustment_svg-tex.pdf'
-
-
-aflvering.tex:102: Package svg Error: File `second_kp_adjustment_svg-tex.pdf_te
-x' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/second_kp_adjustment_svg-tex.pdf_tex'
-
-[3] (aflvering.aux) ) 
+[4] (aflvering.aux) ) 
 Here is how much of TeX's memory you used:
- 4853 strings out of 493308
- 69544 string characters out of 3138766
- 160158 words of memory out of 3000000
- 8289 multiletter control sequences out of 15000+200000
- 13608 words of font info for 36 fonts, out of 3000000 for 9000
+ 4881 strings out of 493308
+ 69883 string characters out of 3138766
+ 160166 words of memory out of 3000000
+ 8317 multiletter control sequences out of 15000+200000
+ 14123 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,6n,42p,580b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,6n,42p,580b,271s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
-w/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
-b>
-Output written on aflvering.pdf (3 pages, 80054 bytes).
+w/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
+Output written on aflvering.pdf (4 pages, 91616 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
