@@ -1,6 +1,8 @@
 \documentclass[12pt]{article}
 \usepackage{times}
 \usepackage{geometry}
+\usepackage{svg}
+\usepackage{amsmath}
 \geometry{letterpaper, portrait, margin=1in}
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem,amssymb}
@@ -10,6 +12,7 @@
 \usepackage{pifont}
 \newcommand{\cmark}{\ding{51}}%
 \newcommand{\xmark}{\ding{55}}%
+\renewcommand\labelitemi{$\cdot$}
 \newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
 \hspace{-2.5pt}}
 \newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
@@ -21,17 +24,15 @@ REG - F19 - Porteføjle 1 \linebreak
 \normalsize
 
 \large
-Udarbejdet af lagoe16
+Udarbejdet af den bedste (AC)
 
 \subsection*{System Modeling}
-
 \begin{itemize}
   \item Setup a model (nth-order dierential equation) of the system.
   \item Derive a linearized model of the system at an angle of $\pi/3$ rad.
 \end{itemize}
 
 \subsection*{Performance Specication}
-
 \begin{itemize}
   \item Specify a desired performance of the system.
 \end{itemize}
@@ -48,15 +49,60 @@ We have chosen the following specifications based on the fact that the system is
   \item Design a PID controller for the linearized model of the system such that it attains the desired performance. The tuning procedure should be described.
 \end{itemize}
 
-The way we can 
-\begin{equation}
+Our transferfunction is as following and is devived from the linearized model:
+\begin{equation} \label{G_s}
+  G(s) = \frac{3}{s^2 + 0.3s -7.365}
+\end{equation}
+First the poles of the systemet is found to be $2.568$ and $-2.8680$ respectively.\\
+To design the PID controller there will be made use of root locus plots to observe the behaviour of the system and to add zeros to obtain the desired behaviour. A PID controller consists of 3 parts, a gain part P, an integral of the error which corrects the steady state error part I and a D part. The D and I part both adds a zero to the transfer function. This is very useful if the transferfunction for K(s) can be rewritten from it's original form, see equation \ref{k_s_original}, to a more manageable form, see equation \ref{k_s_rewritten}.
+\begin{equation} \label{k_s_original}
   kp\cdot(1+\frac{1}{Ti}\cdot \frac{1}{s}+Tds)
 \end{equation}
-
-\begin{equation}
-  kp(\frac{Tds^2 + s + \frac{1}{Ti}}{s})
+\begin{equation} \label{k_s_rewritten}
+  kp\cdot(\frac{Tds^2 + s + \frac{1}{Ti}}{s})
 \end{equation}
-
+However due to the equation above we will add an extra pole as well as two zeroes. It'd be useful to cancel out one of the poles with one of the zeros. It should not matter which pole is picked all though it would make sense to cancel out the unstable pole at 2.568 and place the other zero on the left side of the 2rd original pole at -2.868. As the first iteration the desired zeroes position is (-4,0) and (2.568), which results in a $Ti = -0.1394$ and $Td = 1/1.432$. Kp will be adjusted through the tuning but starts on 1.432.\\
+The root locus plot of this looks like this:
+\begin{figure}[htbp]
+  \centering
+  \includesvg{images/rlocus.svg}
+  \caption{root locus plot} \label{my_root_locus_plot}
+\end{figure}
+Next up is checking the performance of the entire system, see transferfunction \ref{closed_loop_system}.
+\begin{equation} \label{closed_loop_system}
+    T(s) = \frac{K(s) \cdot G(s)}{1+K(s)\cdot G(s)}
+\end{equation}
+By using the matlab function stepinfo and step, both the step responds and the information of the system can be concluded. The results with $Ti = -0.1394$, $Td = 1/1.432$ and $kp = 1.432$ gave a unstable system not worth mentioning, but by increasing the gain Kp to 2.1432 the following was observed:
+\begin{itemize}
+  \item RiseTime: 0.3238
+  \item SettlingTime: 0.9611
+  \item SettlingMin: 0.9027
+  \item SettlingMax: 1.0276
+  \item Overshoot: 2.7641
+  \item Undershoot: 0
+  \item Peak: 1.0276
+\end{itemize}
+\begin{figure}[htbp]
+  \centering
+  \includesvg{images/first_kp_adjustment.svg}
+  \caption{step response for the first iteration} \label{my_first_step}
+\end{figure}
+Next the Kp increases to 4.132
+\begin{itemize}
+  \item RiseTime: 0.1921
+  \item SettlingTime: 0.6671
+  \item SettlingMin: 0.9020
+  \item SettlingMax: 1.0299
+  \item Overshoot: 2.9873
+  \item Undershoot: 0
+  \item Peak: 1.0299
+\end{itemize}
+\begin{figure}[htbp]
+  \centering
+  \includesvg{images/second_kp_adjustment.svg}
+  \caption{step response for the first iteration} \label{my_second_step}
+\end{figure}
+As can be seen by the perfo
 \subsection*{Simulation}
 
 \begin{itemize}
