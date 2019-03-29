@@ -1,0 +1,45 @@
+KP = 20
+
+ans =
+
+  struct with fields:
+
+        RiseTime: 0.1135
+    SettlingTime: 1.2523
+     SettlingMin: 0.9371
+     SettlingMax: 1.4381
+       Overshoot: 43.8123
+      Undershoot: 0
+            Peak: 1.4381
+        PeakTime: 0.3417
+
+KP = 40
+
+ans =
+
+  struct with fields:
+
+        RiseTime: 0.0727
+    SettlingTime: 0.6485
+     SettlingMin: 0.9097
+     SettlingMax: 1.2489
+       Overshoot: 24.8889
+      Undershoot: 0
+            Peak: 1.2489
+        PeakTime: 0.2217
+
+
+KP = 60
+
+ans =
+
+  struct with fields:
+
+        RiseTime: 0.0547
+    SettlingTime: 0.6075
+     SettlingMin: 0.9268
+     SettlingMax: 1.1780
+       Overshoot: 17.8013
+      Undershoot: 0
+            Peak: 1.1780
+        PeakTime: 0.1659
