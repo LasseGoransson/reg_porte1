@@ -17,7 +17,7 @@ D = 0;
 
 openloop_ss = ss(A,B,C,D);
 [gs_a, gs_b] = ss2tf(A,B,C,D);
-openloop_tf = tf(gs_a, gs_b);
+Gs = tf(gs_a, gs_b)
 
 %%Specification
 
@@ -38,16 +38,13 @@ s = tf('s');
 % Ks og nulpunkter
 Td = 1/6.86;
 Ti = 1/1.66;
-kp = 40.86;
-Ks = kp*(Td*s^2+s+1/Ti)/s
+kp = 20.86;
+Ks = kp*(Td*s^2+s+1/Ti)/s;
 
 %karakteristisk ligning
 Ls = Ks*Gs % openloop
 
-rlocus(Ls)
-
-
-Ts = (Ks*Gs)/(1+Ks*Gs) % closedloop
+Ts = (Ks*Gs)/(1+Ks*Gs); % closedloop
 
 step(Ts)
 
@@ -58,34 +55,13 @@ stepinfo(Ts)
 Td = 1/6.86;
 Ti = 1/1.66;
 kp = 60.86;
-Ks = kp*(Td*s^2+s+1/Ti)/s
+Ks = kp*(Td*s^2+s+1/Ti)/s;
 
 %karakteristisk ligning
-Ls = Ks*Gs % openloop
+Ls = Ks*Gs; % openloop
 
-Ls = Ks*Gs % openloop
+Ts = (Ks*Gs)/(1+Ks*Gs); % closedloop
 
-rlocus(Ls)
-
-Ts = (Ks*Gs)/(1+Ks*Gs) % closedloop
-
-step(Ts)
-
-stepinfo(Ts)
-
-% n;ste fors'g med nye nulpunkter
-% Ks og nulpunkter
-Td = 1/2;
-Ti = 1/10;
-kp = 21.86;
-Ks = kp*(Td*s^2+s+1/Ti)/s
-
-Ls = Ks*Gs % openloop
-
-rlocus(Ls)
-Ts = (Ks*Gs)/(1+Ks*Gs) % closedloop
-
-pzmap(Ts)
 step(Ts)
 
 stepinfo(Ts)
@@ -98,11 +74,11 @@ Kd = Td*kp
 Ki = (1/Ti)*kp
 
 ks = kp*(Td*s^2+s+1/Ti)/s;
-ks_simu= kp + Ki*(1/s)+Kd*s;
+ks_simu= kp + Ki*(1/s)+Kd*s
 
-cltf = ks_simu*openloop_tf/(1+ks*openloop_tf);
+cltf = ks_simu*Gs/(1+ks*Gs);
 
-clft_1= ks*openloop_tf/(1+ks*openloop_tf);
+clft_1= ks*Gs/(1+ks*Gs);
 figure(1)
 step(cltf)
 stepinfo(cltf)
@@ -112,3 +88,6 @@ step(clft_1)
 stepinfo(clft_1)
 
 
+figure(2)
+step(clft_1)
+stepinfo(clft_1)
