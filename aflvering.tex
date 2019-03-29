@@ -87,7 +87,7 @@ By using the matlab function stepinfo and step, both the step responds and the i
   \includegraphics[width=0.4\textwidth]{images/kp_20.jpg}
   \caption{step response for the first iteration} \label{my_first_step}
 \end{figure}
-Next the Kp increases to $40.00$ and the following perforamnce of the system can be observed:
+Next the Kp increases to $40.00$ and the following performance of the system can be observed:
 \begin{itemize}
   \item RiseTime: 0.0727
   \item SettlingTime: 0.6485
@@ -101,7 +101,7 @@ Next the Kp increases to $40.00$ and the following perforamnce of the system can
   \includegraphics[width=0.4\textwidth]{images/kp_40.jpg}
   \caption{step response for the second iteration} \label{my_second_step}
 \end{figure}
-The perfoamnce has technically inproved when it comes to rise time and settling time, however the desired rise time is around 1 second so it isn't an improvemnt for the desired system. The overshoot has decreased significantly with $20\%$ which is a huge improvement. Still, however, far from the desired 1\%. The steady state error is eliminated as the previous with try, observed on figure \ref{my_second_step}. This time the Kp has increased to $60.00$.
+The performance has technically inproved when it comes to rise time and settling time, however the desired rise time is around 1 second so it isn't an improvemnt for the desired system. The overshoot has decreased significantly with $50\%$ which is a huge improvement. Still, however, far from the desired 1\%. The steady state error is eliminated as the previous with try, observed on figure \ref{my_second_step}. This time the Kp has increased to $60.00$.
 \begin{itemize}
   \item RiseTime: 0.0547
   \item SettlingTime: 0.6075
@@ -125,6 +125,23 @@ This is realistically not going to work with the properties of the motor. We hav
   \item Simulate the linearized system with set point $\pi/3$ rad. and initial condition 0 rad.
   \item Simulate the nonlinear system model with the designed PID control.
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{images/ulin_simu.jpg}
+  \caption{the input of step response of the simulated linearized system} \label{my_input_step_li}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{images/lin_simu.jpg}
+  \caption{the output of the step response of the simulated linearized system} \label{my_output_step_li}
+\end{subfigure}
+\caption{A figure that shows the step response input and output of the simulated linearized system.}
+\label{fig:step_li}
+\end{figure}
+
 The linearized system has been simulated below and shows that
 \begin{figure}[H]
 \centering
