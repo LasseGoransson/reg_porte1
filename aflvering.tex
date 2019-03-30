@@ -87,7 +87,8 @@ By using the matlab function stepinfo and step, both the step responds and the i
 \end{itemize}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.4\textwidth]{images/kp_20.jpg}
+  \def\svgwidth{0.5\textwidth}
+  \import{./Matlab/images/}{kp_20_step.pdf_tex}
   \caption{step response for the first iteration} \label{my_first_step}
 \end{figure}
 Next the Kp increases to $40.00$ and the following performance of the system can be observed:
@@ -101,7 +102,8 @@ Next the Kp increases to $40.00$ and the following performance of the system can
 \end{itemize}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.4\textwidth]{images/kp_40.jpg}
+  \def\svgwidth{0.5\textwidth}
+  \import{./Matlab/images/}{kp_40_step.pdf_tex}
   \caption{step response for the second iteration} \label{my_second_step}
 \end{figure}
 The performance has technically inproved when it comes to rise time and settling time, however the desired rise time is around 1 second so it isn't an improvemnt for the desired system. The overshoot has decreased significantly with $50\%$ which is a huge improvement. Still, however, far from the desired 1\%. The steady state error is eliminated as the previous with try, observed on figure \ref{my_second_step}. This time the Kp has increased to $60.00$.
@@ -115,8 +117,9 @@ The performance has technically inproved when it comes to rise time and settling
 \end{itemize}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.4\textwidth]{images/kp_60_2.jpg}
-  \caption{step response for the third iteration} \label{my_third_step}
+  \def\svgwidth{0.5\textwidth}
+  \import{./Matlab/images/}{kp_60_step.pdf_tex}
+  \caption{step response for the third iteration} \label{my_third_step}  
 \end{figure}
 As observed with the previous tries the rise time and overshoot has decreased significantly again, still not enough to reach our desired 1\% overshoot. The rise time is way too fast and decreasing with Kp increasing, so increasing the kp will not improve our system anymore. \\
 This is realistically not going to work with the properties of the motor. We have decided to go with a $Kp = 60.00$ and simulate that. In hindersight, we should try changing the zeroes by tuning the I and D.

@@ -44,16 +44,23 @@ Ks = kp*(Td*s^2+s+1/Ti)/s;
 %karakteristisk ligning
 Ls1 = Ks*Gs % openloop
 
-phandle = figure('Name','float_me');
-%rlocus(Ls1)
-
-
-
-%Plot2LaTeX(phandle,'images/matlab_rlocus')
+%phandle = figure('Name','float_me');
 
 Ts = (Ks*Gs)/(1+Ks*Gs); % closedloop
 
-step(Ts);
+phandle = figure('Name','float_me');
+
+[x,y] = step(Ts);
+plot(y,x);
+xlabel('Time (seconds)')
+ylabel('Amplitude')
+title('Step Response - Output Signal')
+set(phandle,'Position',[10 10 300 300])
+
+Plot2LaTeX(phandle,'images/kp_20_step')
+
+
+
 
 stepinfo(Ts);
 
@@ -69,7 +76,16 @@ Ls = Ks*Gs; % openloop
 
 Ts = (Ks*Gs)/(1+Ks*Gs); % closedloop
 
-step(Ts);
+phandle = figure('Name','float_me');
+
+[x,y] = step(Ts);
+plot(y,x);
+xlabel('Time (seconds)')
+ylabel('Amplitude')
+title('Step Response - Output Signal')
+set(phandle,'Position',[10 10 300 300])
+
+Plot2LaTeX(phandle,'images/kp_40_step')
 
 stepinfo(Ts);
 
@@ -84,14 +100,26 @@ ks = kp*(Td*s^2+s+1/Ti)/s;
 ks_simu= kp + Ki*(1/s)+Kd*s
 
 cltf = ks_simu*Gs/(1+ks*Gs);
+Ts=cltf;
+phandle = figure('Name','float_me');
+
+[x,y] = step(Ts);
+plot(y,x);
+xlabel('Time (seconds)')
+ylabel('Amplitude')
+title('Step Response - Output Signal')
+set(phandle,'Position',[10 10 300 300])
+
+Plot2LaTeX(phandle,'images/kp_60_step')
+
 
 clft_1= ks*Gs/(1+ks*Gs);
 figure(1)
-step(cltf)
+%step(cltf)
 stepinfo(cltf);
 
 figure(2)
-step(clft_1)
+%step(clft_1)
 stepinfo(clft_1);
 
 

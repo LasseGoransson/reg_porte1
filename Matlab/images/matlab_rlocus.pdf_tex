@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{750.00550202bp}%
+    \setlength{\unitlength}{375bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -54,5 +54,23 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{matlab_rlocus.pdf}}%
+    \put(0.154,0.0785334){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}-20\end{tabular}}}}%
+    \put(0.3044,0.0785334){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}-15\end{tabular}}}}%
+    \put(0.4548,0.0785334){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}-10\end{tabular}}}}%
+    \put(0.6052,0.0785334){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}-5\end{tabular}}}}%
+    \put(0.7556,0.0785334){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0\end{tabular}}}}%
+    \put(0.906,0.0785334){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}5\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{matlab_rlocus.pdf}}%
+    \put(0.1433334,0.1028){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}-6\end{tabular}}}}%
+    \put(0.1433334,0.2321334){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}-4\end{tabular}}}}%
+    \put(0.1433334,0.3614666){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}-2\end{tabular}}}}%
+    \put(0.1433334,0.4908){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}0\end{tabular}}}}%
+    \put(0.1433334,0.6201334){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}2\end{tabular}}}}%
+    \put(0.1433334,0.7494666){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}4\end{tabular}}}}%
+    \put(0.1433334,0.8788){\makebox(0,0)[rt]{\lineheight{1.25}\smash{\begin{tabular}[t]{r}6\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{matlab_rlocus.pdf}}%
+    \put(0.5275,0.9054){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textbf{Root Locus}\end{tabular}}}}%
+    \put(0.5275,0.0442666){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Real Axis\end{tabular}}}}%
+    \put(0.1009334,0.4955){\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Imaginary Axis\end{tabular}}}}}%
   \end{picture}%
 \endgroup%
