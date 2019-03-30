@@ -136,12 +136,12 @@ This is realistically not going to work with the properties of the motor. We hav
 \centering
 \begin{subfigure}{0.5\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{images/ulin_simu.jpg}
+  \includegraphics[width=1\linewidth]{images/unlin_simu.png}
   \caption{the input of step response of the simulated linearized system} \label{my_input_step_li}
 \end{subfigure}%
 \begin{subfigure}{0.5\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{images/lin_simu.jpg}
+  \includegraphics[width=1\linewidth]{images/lin_simu.png}
   \caption{the output of the step response of the simulated linearized system} \label{my_output_step_li}
 \end{subfigure}
 \caption{A figure that shows the step response input and output of the simulated linearized system.}
@@ -154,16 +154,16 @@ The linearized system has been simulated below and shows that
 \centering
 \begin{subfigure}{0.5\textwidth}
   \def\svgwidth{\textwidth}
-  \import{./Matlab/images/}{sim_unlin_input.pdf_tex}
+  \import{./Matlab/images/}{sim_lin_input.pdf_tex}
   \label{}
   \centering
-  \caption{the input of step response of the simulated linearized system} \label{my_input_step_li}
+  \caption{Control signal} \label{my_input_step_li}
 \end{subfigure}%
 \begin{subfigure}{0.5\textwidth}
   \centering
   \def\svgwidth{\textwidth}
-  \import{./Matlab/images/}{sim_unlin_output.pdf_tex}
-  \caption{the output of the step response of the simulated linearized system} \label{my_output_step_li}
+  \import{./Matlab/images/}{sim_lin_output.pdf_tex}
+  \caption{Output signal} \label{my_output_step_li}
 \end{subfigure}
 \caption{A figure that shows the step response input and output of the simulated linearized system.}
 \label{fig:step_li}
@@ -172,12 +172,28 @@ The linearized system has been simulated below and shows that
 Here the nonlinear system shows a little bit less overshoot than the linearized system. It shows that the output is equal to the expected
 
 
-\begin{figure}
-
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.5\textwidth}
+  \def\svgwidth{\textwidth}
+  \import{./Matlab/images/}{sim_unlin_input.pdf_tex}
+  \label{}
+  \centering
+  \caption{Control signal} \label{my_input_step_li}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+  \centering
+  \def\svgwidth{\textwidth}
+  \import{./Matlab/images/}{sim_unlin_output.pdf_tex}
+  \caption{Output signal} \label{my_output_step_li}
+\end{subfigure}
+\caption{A figure that shows the step response input and output of the simulated unlinearized system.}
+\label{fig:step_li}
 \end{figure}
 
 \subsection*{Conclusion}
 We can conclude that the PID controller that we have designed are not meeting our performance specifications. We do not know what the problem is, other than that it is due to our tuning process of the PID controller. 
+
 
 
 
