@@ -42,13 +42,20 @@ kp = 20.86;
 Ks = kp*(Td*s^2+s+1/Ti)/s;
 
 %karakteristisk ligning
-Ls = Ks*Gs % openloop
+Ls1 = Ks*Gs % openloop
+
+phandle = figure('Name','float_me');
+%rlocus(Ls1)
+
+
+
+%Plot2LaTeX(phandle,'images/matlab_rlocus')
 
 Ts = (Ks*Gs)/(1+Ks*Gs); % closedloop
 
-step(Ts)
+step(Ts);
 
-stepinfo(Ts)
+stepinfo(Ts);
 
 % n;ste fors'g med nye nulpunkter
 % Ks og nulpunkter
@@ -62,9 +69,9 @@ Ls = Ks*Gs; % openloop
 
 Ts = (Ks*Gs)/(1+Ks*Gs); % closedloop
 
-step(Ts)
+step(Ts);
 
-stepinfo(Ts)
+stepinfo(Ts);
 
 Td = 1/6.86;
 Ti = 1/1.66;
@@ -81,13 +88,16 @@ cltf = ks_simu*Gs/(1+ks*Gs);
 clft_1= ks*Gs/(1+ks*Gs);
 figure(1)
 step(cltf)
-stepinfo(cltf)
+stepinfo(cltf);
 
 figure(2)
 step(clft_1)
-stepinfo(clft_1)
+stepinfo(clft_1);
 
 
 figure(2)
 step(clft_1)
-stepinfo(clft_1)
+stepinfo(clft_1);
+
+
+close all

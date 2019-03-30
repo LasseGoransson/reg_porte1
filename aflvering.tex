@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{times}
+\usepackage{import}
 \usepackage{geometry}
 \usepackage{svg}
 \usepackage{amsmath}
@@ -34,7 +35,8 @@ REG - F19 - Porteføjle 1 \linebreak
   \item Derive a linearized model of the system at an angle of $\pi/3$ rad.
 \end{itemize}
 
-\subsection*{Performance Specication}
+\subsection*{Performance Specification}
+
 \begin{itemize}
   \item Specify a desired performance of the system.
 \end{itemize}
@@ -44,7 +46,7 @@ The chosen performance specifications are as following:
   \item Settling time = 1.2 seconds.
   \item Overshoot = 2 procent.
 \end{itemize}
- The following specifications has been chosen based on the system being a robotic arm. It should neither have too fast nor too slow a rise time or settling time. If the rise time is too slow, it'll limit its use significantly however if it moves too quickly it might both be impossible due to the motor physical limits and very dangerous for people working around and with it. The settling time and overshoot both should be as low as possible.
+ The following specifications has been chosen based on the system being a robotic arm. It should neither have too fast nor too slow a rise time or settling time. If the rise time is too slow, it'll limit its usPerformancePerformancee significantly however if it moves too quickly it might both be impossible due to the motor physical limits and very dangerous for people working around and with it. The settling time and overshoot both should be as low as possible.
 \subsection*{Controller Design}
 \begin{itemize}
   \item Design a PID controller for the linearized model of the system such that it attains the desired performance. The tuning procedure should be described.
@@ -66,7 +68,8 @@ However due to the equation above we will add an extra pole as well as two zeroe
 The root locus plot of this looks like this:
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.4\textwidth]{images/rlocus.jpg}
+  \def\svgwidth{\textwidth}
+  \import{./Matlab/images/}{matlab_rlocus.pdf_tex}
   \caption{Root locus plot} \label{my_root_locus_plot}
 \end{figure}
 Next up is checking the performance of the entire system, see transferfunction \ref{closed_loop_system}.
@@ -143,16 +146,20 @@ This is realistically not going to work with the properties of the motor. We hav
 \end{figure}
 
 The linearized system has been simulated below and shows that
+
 \begin{figure}[H]
 \centering
 \begin{subfigure}{0.5\textwidth}
+  \def\svgwidth{\textwidth}
+  \import{./Matlab/images/}{sim_unlin_input.pdf_tex}
+  \label{}
   \centering
-  \includegraphics[width=1\linewidth]{images/sim_input_step.jpg}
   \caption{the input of step response of the simulated linearized system} \label{my_input_step_li}
 \end{subfigure}%
 \begin{subfigure}{0.5\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{images/sim_output_step.jpg}
+  \def\svgwidth{\textwidth}
+  \import{./Matlab/images/}{sim_unlin_output.pdf_tex}
   \caption{the output of the step response of the simulated linearized system} \label{my_output_step_li}
 \end{subfigure}
 \caption{A figure that shows the step response input and output of the simulated linearized system.}
@@ -160,21 +167,16 @@ The linearized system has been simulated below and shows that
 \end{figure}
 
 Here the nonlinear system shows a little bit less overshoot than the linearized system. It shows that the output is equal to the expected
-\begin{figure}[H]
-\centering
-\begin{subfigure}{0.5\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{images/sim_input_step_unlin.jpg}
-  \caption{the input of step response of the simulated nonlinear system} \label{my_input_step_pid}
-\end{subfigure}%
-\begin{subfigure}{0.5\textwidth}
-  \centering
-  \includegraphics[width=1\linewidth]{images/sim_output_step_unlin.jpg}
-  \caption{the output of the step response of the simulated nonlinear system} \label{my_output_step_pid}
-\end{subfigure}
-\caption{A figure that shows the step response input and output of the simulated nonlinear system.}
-\label{fig:ste_unli}
+
+
+\begin{figure}
+
 \end{figure}
+
+
+
+
+
 
 
 
