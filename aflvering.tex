@@ -119,7 +119,7 @@ The performance has technically inproved when it comes to rise time and settling
   \centering
   \def\svgwidth{0.5\textwidth}
   \import{./Matlab/images/}{kp_60_step.pdf_tex}
-  \caption{step response for the third iteration} \label{my_third_step}  
+  \caption{step response for the third iteration} \label{my_third_step}
 \end{figure}
 As observed with the previous tries the rise time and overshoot has decreased significantly again, still not enough to reach our desired 1\% overshoot. The rise time is way too fast and decreasing with Kp increasing, so increasing the kp will not improve our system anymore. \\
 This is realistically not going to work with the properties of the motor. We have decided to go with a $Kp = 60.00$ and simulate that. In hindersight, we should try changing the zeroes by tuning the I and D.
@@ -176,6 +176,8 @@ Here the nonlinear system shows a little bit less overshoot than the linearized 
 
 \end{figure}
 
+\subsection*{Conclusion}
+We can conclude that the PID controller that we have designed are not meeting our performance specifications. We do not know what the problem is, other than that it is due to our tuning process of the PID controller. 
 
 
 
