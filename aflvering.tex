@@ -23,9 +23,10 @@
 \newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
 
 \begin{document}
-\raggedright
-\huge
-REG - F19 - Porteføjle 1 \linebreak
+\title{Hand-In Exercise 1: Modeling and Control of Robot Arm}
+\author{Lasse Gøransson og andre}
+
+\maketitle
 \normalsize
 
 
@@ -34,6 +35,34 @@ REG - F19 - Porteføjle 1 \linebreak
   \item Setup a model (nth-order dierential equation) of the system.
   \item Derive a linearized model of the system at an angle of $\pi/3$ rad.
 \end{itemize}
+
+\begin{figure}[H]
+  \includegraphics{images/HandInAssignment1REG.png}
+  \caption{Sketch of the forces acting on the system}
+  \label{}
+\end{figure}
+
+From the above sketch the following equation can be derived
+
+\begin{equation}
+  \ddot{\theta} = \frac{\tau}{I} + \frac{g\cdot m \cdot L \cdot \sin \theta}{I} - \frac{b\dot{\theta}}{I}
+\end{equation}
+
+From this the linearized state space model can be built
+\begin{equation}
+  \dot{x} = \left[\begin{array}{cc} 0 & 1\\ \frac{g\cdot m\cdot l\cdot\cos(\frac{\pi}{3})}{I} & \frac{-b}{I} \end{array}\right]x+ \left[\begin{array}{c} 0\\ 3 \end{array}\right]u
+\end{equation}
+\begin{equation}
+  y = \left[\begin{array}{cc} 1 & 0 \end{array}\right]x
+\end{equation}
+
+
+
+
+
+
+
+
 
 \subsection*{Performance Specification}
 
@@ -192,8 +221,8 @@ Here the nonlinear system shows a little bit less overshoot than the linearized 
 \end{figure}
 
 \subsection*{Conclusion}
-We can conclude that the PID controller that we have designed are not meeting our performance specifications. In particular the rise time is extremly short and this causes the big spike in control signal that cannot be realised.\\
-If we have spend some time tuning the PID parameter indivuale after applying the root locus method we would properly have been able to come closer to our performance specifications.
+We can conclude that the PID controller that we have designed are not meeting Our performance specifications. In particular the rise time is extremly short and this causes the big spike in the control signal that cannot be realised.\\
+If we have spend some more time tuning the PID parameters individually after applying the root locus method we would probably have been able to come closer to our desired performance specifications.
 
 
 
