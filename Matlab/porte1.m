@@ -50,7 +50,7 @@ Ts = (Ks*Gs)/(1+Ks*Gs); % closedloop
 
 phandle = figure('Name','float_me');
 
-[x,y] = step(Ts);
+[x,y] = step(Ts,2);
 plot(y,x);
 xlabel('Time (seconds)')
 ylabel('Amplitude')
@@ -78,7 +78,7 @@ Ts = (Ks*Gs)/(1+Ks*Gs); % closedloop
 
 phandle = figure('Name','float_me');
 
-[x,y] = step(Ts);
+[x,y] = step(Ts,2);
 plot(y,x);
 xlabel('Time (seconds)')
 ylabel('Amplitude')
@@ -103,7 +103,7 @@ cltf = ks_simu*Gs/(1+ks*Gs);
 Ts=cltf;
 phandle = figure('Name','float_me');
 
-[x,y] = step(Ts);
+[x,y] = step(Ts,2);
 plot(y,x);
 xlabel('Time (seconds)')
 ylabel('Amplitude')
