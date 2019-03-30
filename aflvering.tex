@@ -24,7 +24,7 @@
 
 \begin{document}
 \title{Hand-In Exercise 1: Modeling and Control of Robot Arm}
-\author{Lasse Gøransson, Nicholai Bjerke Jensen og co.}
+\author{Lasse Gøransson, Nicholai Bjerke Jensen og Anne-Charlotte Poulsen}
 
 \maketitle
 \normalsize
@@ -101,11 +101,11 @@ The root locus plot of this looks like this:
   \import{./Matlab/images/}{matlab_rlocus.pdf_tex}
   \caption{Root locus plot} \label{my_root_locus_plot}
 \end{figure}
-Next up is checking the performance of the entire system, see transferfunction \ref{closed_loop_system}.
+Next up is checking the performance of the entire system, see equation \ref{closed_loop_system}.
 \begin{equation} \label{closed_loop_system}
     T(s) = \frac{K(s) \cdot G(s)}{1+K(s)\cdot G(s)}
 \end{equation}
-By using the matlab function stepinfo and step, both the step responds and the information of the system can be concluded. The results with $Ti = 0.146$, $Td = 0.60$ and $kp = 6.68$ gave a unstable system not worth mentioning, but by increasing the gain Kp to $20.00$ the following was observed:
+By using the matlab functions stepinfo and step, both the step responds and the information of the system can be concluded. The results with $Ti = 0.146$, $Td = 0.60$ and $kp = 6.68$ gave a unstable system not worth mentioning, but by increasing the gain Kp to $20.00$ the following was observed:
 \begin{itemize}
   \item RiseTime: 0.1135s
   \item SettlingTime: 1.2523s
